@@ -50,7 +50,7 @@ int remove_item(ArrayPtr arr, const void* value);
  * @param index the index of the item to be removed from the array
  * @return int - 0 on success or 1 on error
  */
-int remove_at(ArrayPtr arr, const size_t index);
+int remove_at(ArrayPtr arr,  size_t index);
 
 /**
  * @brief get the value at a given index from the array
@@ -59,7 +59,7 @@ int remove_at(ArrayPtr arr, const size_t index);
  * @param index the position of the item to be return
  * @return void* to the item at the index
  */
-void* get(ArrayPtr arr, const size_t index);
+void* get(ArrayPtr arr,  size_t index);
 
 /**
  * @brief set the value at a given index of the array to a given value
@@ -69,7 +69,7 @@ void* get(ArrayPtr arr, const size_t index);
  * @param value the value to be set at the index
  * @return int - 0 fro success or 1 for error
  */
-int set(ArrayPtr arr, const size_t index, const void* value);
+int set(ArrayPtr arr,  size_t index, const void* value);
 
 /**
  * @brief checks if the array contains a given value
@@ -89,7 +89,7 @@ int contains(ArrayPtr arr, const void* value);
  * @param value Pointer to the value to insert
  * @return int - 0 on success or 1 on error
  */
-int insert_at(ArrayPtr arr, const size_t index, const void* value);
+int insert_at(ArrayPtr arr,  size_t index, const void* value);
 
 /**
  * @brief reverse  the order of the array
@@ -125,7 +125,7 @@ int shrink_to_fit(ArrayPtr arr);
  *            0 if they are equal or 1 if the first element is larger.
  * @return int -0 forsuccess or 1 for error.
  */
-int sort(ArrayPtr arr, const Compare cmp);
+int sort(ArrayPtr arr,  Compare cmp);
 
 /**
  * @brief apply the function to each element of the array
@@ -134,7 +134,7 @@ int sort(ArrayPtr arr, const Compare cmp);
  * @param fn Function pointer that do something with the value in the array.
  * @return int - 0 for success or 1 for error
  */
-int map(ArrayPtr arr, const Function func);
+int map(ArrayPtr arr,  Function func);
 
 /**
  * @brief creates a new array with elements that pass the predicate
@@ -144,7 +144,6 @@ int map(ArrayPtr arr, const Function func);
                 0 if true and 1 if not true
  * @return void* Pointer to the new array
  */
-ArrayPtr filter( ArrayPtr arr, const Predicate pred);
-
+ArrayPtr filter(ArrayPtr arr,  Predicate pred);
 
 #endif
