@@ -11,7 +11,6 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-
 #define LOAD_FACTOR 0.75
 
 typedef enum {
