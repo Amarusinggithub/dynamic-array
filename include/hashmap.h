@@ -115,7 +115,7 @@ static inline size_t map_size(const Map* map, MAP_ERROR_CODES* err) {
         (void)fprintf(stderr, "[%s] The err is null in %s line# %d",
                       map_error_to_str(MAP_ERROR_RETURN_ERROR), __FILE__, __LINE__);
 #endif
-        return MAP_ERROR_RETURN_ERROR;
+        return SIZE_MAX;
     }
     if (map == NULL) {
 #ifdef DEBUG
@@ -131,11 +131,11 @@ static inline size_t map_size(const Map* map, MAP_ERROR_CODES* err) {
 }
 
 /**
- * @brief
+ * @brief checks if the map is empty
  *
- * @param map
- * @return true
- * @return false
+ * @param map Pointer to the map
+ * @return true-> if map is empty
+ * @return false-> if map is not empty
  */
 static inline bool map_is_empty(const Map* map, MAP_ERROR_CODES* err) {
     if (err == NULL) {

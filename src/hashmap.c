@@ -195,7 +195,7 @@ void* map_get(const Map* map, const char* key, MAP_ERROR_CODES* err) {
 
     if (map == NULL) {
 #ifdef DEBUG
-        (void)fprintf(stderr, "[%s]The Map is null in %s line# %d",
+        (void)fprintf(stderr, "[%s] The Map is null in %s line# %d",
                       map_error_to_str(MAP_ERROR_RETURN_ERROR), __FILE__, __LINE__);
 #endif
         *err = MAP_ERROR_RETURN_ERROR;
@@ -437,7 +437,7 @@ static inline void map_free_buckets(MapPtr map) {
 MAP_ERROR_CODES map_clear(MapPtr map) {
     if (map == NULL) {
 #ifdef DEBUG
-        (void)fprintf(stderr, "[%s]The Map is null in %s line# %d",
+        (void)fprintf(stderr, "[%s] The Map is null in %s line# %d",
                       map_error_to_str(MAP_ERROR_RETURN_ERROR), __FILE__, __LINE__);
 #endif
         return (MAP_ERROR_RETURN_ERROR);
