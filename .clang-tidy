@@ -1,12 +1,17 @@
 ---
 # C project — modernize-* is C++ only and must be excluded entirely
 Checks: >
+  bugprone-*
   clang-diagnostic-*,
   clang-analyzer-*,
   bugprone-*,
   cert-*,
+  llvm-*,
   misc-*,
   readability-*,
+  performance-*,
+  google-*,
+  android-*,
   -cert-dcl16-c,
   -readability-implicit-bool-conversion,
   -readability-identifier-naming,
